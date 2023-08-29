@@ -1,0 +1,13 @@
+{
+  "name": "fullstack-cool-kids-like",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.5.0",
+    "eslint": "^8.0.1",
+    "typescript": "^5.2.2",
+    "concurrently": "^8.2.1"
+  }
+}

@@ -1,9 +1,10 @@
 {
-  "name": "fullstack-cool-kids-like",
+  "name": "server",
   "version": "1.0.50",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "concurrently \"bun run --watch src/index.ts\" \"pnpm run dev:client\"",
+    "dev:client": "cd src/web && pnpm vite"
   },
   "dependencies": {
     "@elysiajs/graphql-yoga": "^0.6.1",
@@ -12,13 +13,10 @@
   },
   "devDependencies": {
     "bun-types": "latest",
-    "eslint": "^8.0.1",
-    "@typescript-eslint/eslint-plugin": "^6.4.0",
     "eslint-config-standard-with-typescript": "latest",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-n": "^15.0.0 || ^16.0.0",
-    "eslint-plugin-promise": "^6.0.0",
-    "typescript": "*"
+    "eslint-plugin-promise": "^6.0.0"
   },
   "module": "src/index.js"
 }
