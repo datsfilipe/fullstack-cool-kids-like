@@ -1,6 +1,11 @@
 {
   "name": "fullstack-cool-kids-like",
   "private": true,
+  "scripts": {
+    "dev": "concurrently \"bun run dev:server\" \"bun run dev:client\"",
+    "dev:server": "cd packages/server && bun run dev",
+    "dev:client": "cd packages/web && bun run dev"
+  },
   "workspaces": [
     "packages/*"
   ],
