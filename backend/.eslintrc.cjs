@@ -24,7 +24,6 @@ module.exports = {
   rules: {
     quotes: ["error", "double"],
     semi: ["error", "never"],
-    "space-before-function-paren": ["error", "never"],
     indent: ["error", 2],
     "@typescript-eslint/quotes": "off"
   }
