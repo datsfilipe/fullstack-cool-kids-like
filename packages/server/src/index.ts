@@ -1,6 +1,7 @@
 import { Elysia } from "elysia"
 import { yoga } from "@elysiajs/graphql-yoga"
 import { swagger } from "@elysiajs/swagger"
+import { cors } from '@elysiajs/cors'
 
 import db from "./db"
 
@@ -65,6 +66,7 @@ const app = new Elysia()
       }
     })
   )
+  .use(cors())
   .use(swagger())
   .listen(8080)
 
